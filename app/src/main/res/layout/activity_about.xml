@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <ImageView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_my_email"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="-30dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_custom" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/tv_my_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_profile"
+        android:layout_marginTop="13dp"
+        android:text="Excel Jemmy Saputra"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_my_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_my_name"
+        android:layout_marginTop="3dp"
+        android:text="exceljesap@gmail.com"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

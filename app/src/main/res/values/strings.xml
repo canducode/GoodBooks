@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GoodBooks</string>
+    <string name="books_name">Judul Buku</string>
+    <string name="detail">Detail</string>
+    <string name="author">Author</string>
+    <string name="baca">\"Saya sudah baca, \n jadi saya rekomendasikan.\"</string>
+</resources>
