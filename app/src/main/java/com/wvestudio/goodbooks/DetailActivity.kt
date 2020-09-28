@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toolbar
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
@@ -36,5 +37,13 @@ class DetailActivity : AppCompatActivity() {
             .load(intent.getIntExtra(EXTRA_PHOTO,0))
             .apply(RequestOptions().override(150,220))
             .into(imgPhoto)
+
+        supportActionBar?.title = "Detail Buku"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
