@@ -1,4 +1,4 @@
-package com.wvestudio.goodbooks
+package com.submission.goodbooks
 
 data class Book(
     var title: String = "",

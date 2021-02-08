@@ -1,4 +1,4 @@
-package com.wvestudio.goodbooks
+package com.submission.goodbooks
 
 object BooksData {
     private val bookTitles = arrayOf(

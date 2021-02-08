@@ -1,4 +1,4 @@
-package com.wvestudio.goodbooks
+package com.submission.goodbooks
 
 import android.view.LayoutInflater
 import android.view.View

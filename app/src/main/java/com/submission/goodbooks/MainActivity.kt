@@ -1,4 +1,4 @@
-package com.wvestudio.goodbooks
+package com.submission.goodbooks
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,27 +6,27 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.submission.goodbooks.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var rvBooks: RecyclerView
+    private lateinit var binding: ActivityMainBinding
     private var list: ArrayList<Book> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        rvBooks = findViewById(R.id.rv_books)
-        rvBooks.setHasFixedSize(true)
+        binding.rvBooks.setHasFixedSize(true)
 
         list.addAll(BooksData.listData)
         showRecyclerList()
     }
 
     private fun showRecyclerList() {
-        rvBooks.layoutManager = LinearLayoutManager(this)
+        binding.rvBooks.layoutManager = LinearLayoutManager(this)
         val listBookAdapter = ListBookAdapter(list)
-        rvBooks.adapter = listBookAdapter
+        binding.rvBooks.adapter = listBookAdapter
 
         listBookAdapter.setOnClickCallback(object : ListBookAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Book) {
@@ -36,12 +36,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSelectedBook(book: Book) {
-        val moveToDetailIntent = Intent(this,DetailActivity::class.java)
-        moveToDetailIntent.putExtra(DetailActivity.EXTRA_TITLE, book.title)
-        moveToDetailIntent.putExtra(DetailActivity.EXTRA_AUTHOR, book.author)
-        moveToDetailIntent.putExtra(DetailActivity.EXTRA_DETAIL, book.detail)
-        moveToDetailIntent.putExtra(DetailActivity.EXTRA_ISBN, book.isbn)
-        moveToDetailIntent.putExtra(DetailActivity.EXTRA_PHOTO, book.photo)
+        val moveToDetailIntent = Intent(this,DetailActivity::class.java).apply {
+            putExtra(DetailActivity.EXTRA_TITLE, book.title)
+            putExtra(DetailActivity.EXTRA_AUTHOR, book.author)
+            putExtra(DetailActivity.EXTRA_DETAIL, book.detail)
+            putExtra(DetailActivity.EXTRA_ISBN, book.isbn)
+            putExtra(DetailActivity.EXTRA_PHOTO, book.photo)
+        }
         startActivity(moveToDetailIntent)
     }
 

@@ -1,4 +1,4 @@
-package com.wvestudio.goodbooks
+package com.submission.goodbooks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
