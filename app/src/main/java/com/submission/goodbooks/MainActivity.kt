@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun setMode(selectedMode: Int) {
         when (selectedMode) {
-            R.id.action_about -> {
-                startActivity(Intent(this,AboutActivity::class.java))
+            R.id.about_page -> {
+                startActivity(Intent(this, AboutActivity::class.java))
             }
         }
     }

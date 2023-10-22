@@ -6,10 +6,12 @@ import android.os.Bundle
 import android.os.Handler
 
 class SplashActivity : AppCompatActivity() {
-    private val SPLASH_TIME_OUT: Long = 3000
+    companion object {
+        private const val SPLASHTIMEOUT: Long = 3000
+    }
 
     @Suppress("DEPRECATION")
-    val handler = Handler()
+    private val handler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +20,6 @@ class SplashActivity : AppCompatActivity() {
         handler.postDelayed({
             startActivity(Intent(this,MainActivity::class.java))
             finish()
-        },SPLASH_TIME_OUT)
+        },SPLASHTIMEOUT)
     }
 }

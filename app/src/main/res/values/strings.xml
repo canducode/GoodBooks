@@ -4,4 +4,7 @@
     <string name="detail">Detail</string>
     <string name="author">Author</string>
     <string name="baca">\"Saya sudah baca, \n jadi saya rekomendasikan.\"</string>
+    <string name="about_name">Excel Jemmy Saputra</string>
+    <string name="about_email">exceljesap@gmail.com</string>
+    <string name="about_page">About</string>
 </resources>
